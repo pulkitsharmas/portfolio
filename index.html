@@ -7,17 +7,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500" rel="stylesheet">
-		<script src="js/jquery-3.2.1.min.js"></script>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
 	</head>
 
 	<body class="backtop">
 
 		<div class="container">
-			<header>
+			<header class="container">
 				<div id="h" class="above row">
 					<div class="col-md-6">
-						<img id="profile-img" src="images/udacity.svg" alt="udacity logo">
+						<img class="profile-img" src="images/udacity.svg" alt="udacity logo">
 					</div>
 					<div class="text-right text-uppercase col-md-6">
 						<h1 class="title">Jane Doette</h1>
@@ -26,7 +24,9 @@
 				</div>
 			
 				<div class="row">
-					<hr>
+					<div class="col-md-12">
+						<hr>
+					</div>
 				</div>
 			
 				<div class="row text-center text-uppercase  subtitle">
@@ -36,15 +36,20 @@
 				</div>
 			</header>
 
-			<article>
+			<article class="container">
 				<div class="row ">
 					<div class="col-md-12 big-image">
-						<img class="img-responsive my-image" src="images/hostel.jpg" alt="my hostel">
+						<picture>
+							<source srcset="images/hostel.jpg" media="(min-width: 1001px)">
+							<source srcset="images/hostel-md.jpg" media="(min-width: 750px and max-width: 1000)">
+							<source srcset="images/hostel-sm.jpg" media="(max-width: 749px)">
+							<img class="img-responsive my-image" src="images/hostel.jpg" alt="hostel">
+						</picture>
 					</div>
 				</div>
 			</article>
 
-			<section>
+			<section class="container">
 				<div id="w" class="row work-heading">
 					<div class="col-md-12">
 						<h1 class="subtitle text-uppercase">Featured Work</h1>	
@@ -52,12 +57,18 @@
 				</div>
 
 				<div class="row">
-					<hr>
+					<div class="col-md-12">
+						<hr>
+					</div>
 				</div>
 
 				<div class="row text-center test">
 					<div class="col-md-4 above ">
-						<img class="work-image img-responsive" src="images/work1.jpg" alt="appify">	
+						<picture>
+							<source srcset="images/work1.jpg" media="(min-width: 750px)">
+							<source srcset="images/work1-md.jpg" media="(max-width: 749px)">
+							<img class="img-responsive work-image" src="images/work1.jpg" alt="appify">
+						</picture>
 						<h2 class="work-caption text-uppercase">appify</h2>
 						<p>
 							<a href="https://github.com/udacity/appify/">Github Link</a>
@@ -65,7 +76,11 @@
 					</div>
 
 					<div class="col-md-4 above">
-						<img class="img-responsive work-image" src="images/work2.jpg" alt="sunflower">	
+						<picture>
+							<source srcset="images/work2.jpg" media="(min-width: 750px)">
+							<source srcset="images/work2-md.jpg" media="(max-width: 749px)">
+							<img class="img-responsive work-image" src="images/work2.jpg" alt="sunflower">
+						</picture>
 						<h2 class="work-caption text-uppercase">sunflower</h2>
 						<p>
 							<a href="https://github.com/udacity/sunflower/">Github Link</a>
@@ -73,7 +88,11 @@
 					</div>
 
 					<div class="col-md-4 above">
-						<img class="work-image img-responsive" src="images/work3.jpg" alt="bukeh">	
+						<picture>
+							<source srcset="images/work3.jpg" media="(min-width: 750px)">
+							<source srcset="images/work3-md.jpg" media="(max-width: 749px)">
+							<img class="img-responsive work-image" src="images/work3.jpg" alt="bukeh">
+						</picture>
 						<h2 class="work-caption text-uppercase">bukeh</h2>
 						<p>
 							<a href="https://github.com/udacity/bukeh/">Github Link</a>
@@ -82,7 +101,7 @@
 				</div>
 			</section>
 
-			<section>
+			<section class="container">
 				<div id="a" class="row work-heading">
 					<div class="col-md-12">
 						<h1 class="subtitle text-uppercase">About</h1>	
@@ -90,7 +109,9 @@
 				</div>
 
 				<div class="row">
-					<hr>
+					<div class="col-md-12">
+						<hr>
+					</div>
 				</div>
 
 				<div class="row">
@@ -121,11 +142,11 @@
 				</div>
 			</section>
 
-			<footer>
-				<div class="row above">
-					<hr>
-				</div>
+			<footer class="row above">
+				<hr>
 			</footer>
 		</div>
 	</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 </html>
